@@ -1,0 +1,99 @@
+No.of.Buttons : 25
+CALCULATOR BUTTONS 
+0)Resource Id(ID) : com.google.android.calculator:id/op_sqrt	 Content of the Resource(content-desc) : square root
+1)Resource Id(ID) : com.google.android.calculator:id/const_pi	 Content of the Resource(content-desc) : pi
+2)Resource Id(ID) : com.google.android.calculator:id/op_pow	 Content of the Resource(content-desc) : power
+3)Resource Id(ID) : com.google.android.calculator:id/op_fact	 Content of the Resource(content-desc) : factorial
+4)Resource Id(ID) : com.google.android.calculator:id/collapse_expand	 Content of the Resource(content-desc) : Expand
+5)Resource Id(ID) : com.google.android.calculator:id/clr	 Content of the Resource(content-desc) : clear
+6)Resource Id(ID) : com.google.android.calculator:id/parens	 Content of the Resource(content-desc) : left or right parenthesis
+7)Resource Id(ID) : com.google.android.calculator:id/op_pct	 Content of the Resource(content-desc) : percent
+8)Resource Id(ID) : com.google.android.calculator:id/op_div	 Content of the Resource(content-desc) : divide
+9)Resource Id(ID) : com.google.android.calculator:id/digit_7	 Content of the Resource(content-desc) : 7
+10)Resource Id(ID) : com.google.android.calculator:id/digit_8	 Content of the Resource(content-desc) : 8
+11)Resource Id(ID) : com.google.android.calculator:id/digit_9	 Content of the Resource(content-desc) : 9
+12)Resource Id(ID) : com.google.android.calculator:id/op_mul	 Content of the Resource(content-desc) : multiply
+13)Resource Id(ID) : com.google.android.calculator:id/digit_4	 Content of the Resource(content-desc) : 4
+14)Resource Id(ID) : com.google.android.calculator:id/digit_5	 Content of the Resource(content-desc) : 5
+15)Resource Id(ID) : com.google.android.calculator:id/digit_6	 Content of the Resource(content-desc) : 6
+16)Resource Id(ID) : com.google.android.calculator:id/op_sub	 Content of the Resource(content-desc) : minus
+17)Resource Id(ID) : com.google.android.calculator:id/digit_1	 Content of the Resource(content-desc) : 1
+18)Resource Id(ID) : com.google.android.calculator:id/digit_2	 Content of the Resource(content-desc) : 2
+19)Resource Id(ID) : com.google.android.calculator:id/digit_3	 Content of the Resource(content-desc) : 3
+20)Resource Id(ID) : com.google.android.calculator:id/op_add	 Content of the Resource(content-desc) : plus
+21)Resource Id(ID) : com.google.android.calculator:id/digit_0	 Content of the Resource(content-desc) : 0
+22)Resource Id(ID) : com.google.android.calculator:id/dec_point	 Content of the Resource(content-desc) : point
+23)Resource Id(ID) : com.google.android.calculator:id/del	 Content of the Resource(content-desc) : delete
+24)Resource Id(ID) : com.google.android.calculator:id/eq	 Content of the Resource(content-desc) : equals
+
+
+
+
+
+// To Set the Desired Capabilities
+		DesiredCapabilities cap= new DesiredCapabilities();
+		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
+		//cap.setCapability("automationName", "UiAutomator2");
+		//cap.setCapability("automationName", "UiAutomator1");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"motorola one macro");
+		cap.setCapability(MobileCapabilityType.UDID, "ZF652253BB");
+		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
+		cap.setCapability("appPackage", "com.google.android.calculator");
+		cap.setCapability("appActivity", "com.android.calculator2.Calculator");
+		//cap.setCapability("appPackage", "com.motorola.fmplayer");
+		//cap.setCapability("appActivity", "com.android.fmplayer.ChangeThemeActivity");
+
+		// To specify the Appium Server
+		URL url=new URL("http://0.0.0.0:4723/wd/hub");
+		driver=new AndroidDriver(url,cap);
+		System.out.println("Application Started Successfully....");
+		
+		
+		
+		
+		
+		
+		
+			// Change Theme in Calculator
+		//WebElement MoreOptions=driver.findElement(By.xpath("//android.widget.ImageView[@content-desc=\"More options\"]"));
+		//MoreOptions.click();
+//		WebElement ChooseTheme=driver.findElement(By.xpath("//*[@text='Choose theme']"));
+//		ChooseTheme.click();
+//		WebElement ThemeSelect=driver.findElement(By.xpath("//*[@text='Dark']"));
+//		ThemeSelect.click();
+//		WebElement ClickOK=driver.findElement(By.xpath("//*[@text='OK']"));
+//		ClickOK.click();
+
+
+
+	// To get All buttons loctars of the Calculator & Click All buttons of the calculator
+		//ArrayList<WebElement> al=new ArrayList<WebElement>(driver.findElements(By.xpath("//android.widget.ImageButton")));
+		//WebElement result=driver.findElement(By.id("com.google.android.calculator:id/result_preview"));
+		//com.google.android.calculator:id/formula
+		//System.out.println("No.of.Buttons : " + al.size());
+		
+		driver.findElement(By.id("com.google.android.calculator:id/digit_2")).click();
+		driver.findElement(By.id("com.google.android.calculator:id/digit_5")).click();
+		driver.findElement(By.id("com.google.android.calculator:id/op_add")).click();
+		driver.findElement(By.id("com.google.android.calculator:id/digit_2")).click();
+		driver.findElement(By.id("com.google.android.calculator:id/digit_5")).click();
+		
+		
+		
+		
+		
+		
+		
+
+//To get the History
+		//		WebElement MoreOptions1=driver.findElement(By.xpath("//android.widget.ImageView[@content-desc=\"More options\"]"));
+		//		MoreOptions1.click();
+		//		WebElement Historybtn=driver.findElement(By.xpath("//android.widget.TextView[@text=\"History\"]"));
+		//		Historybtn.click();
+		//		WebElement History=driver.findElement(By.id("com.google.android.calculator:id/history_recycler_view"));
+		//		History.click();
+
+		//		WebElement History=driver.findElement(By.id("com.google.android.calculator:id/empty_history_view"));
+		//		History.click();
+		//		System.out.println(History.getText());
